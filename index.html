@@ -46,7 +46,6 @@
 .sample-head{padding:14px 23px;background:#f2f5f8;border-bottom:1px solid #dce2e9;align-items:center}
 .sample-head strong{font-size:12px;line-height:1.4;letter-spacing:0;color:#35445a;font-weight:700}
 .sample-brand{font-family:var(--heading);color:#485a75;font-size:12px;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
-.sample-brand span{width:7px;height:7px;border-radius:50%;background:#bb7f2c}
 .sample-body{padding:26px 24px 22px}
 .sample-title-row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:19px}
 .example-title{color:#1a2b42;margin:0;font-size:31px}
@@ -78,11 +77,11 @@
 .expertise-head{display:flex;align-items:center;justify-content:space-between;color:#d1dbe8;border-bottom:1px solid #ffffff30;padding-bottom:17px;margin-bottom:2px}
 .expertise-head span{font-size:12px;font-weight:700;letter-spacing:.03em}
 .expertise-head svg{width:58px;height:40px}
-.expertise-item{display:grid;grid-template-columns:28px 1fr;column-gap:14px;border-bottom:1px solid #ffffff20;padding:19px 0}
+.expertise-item{display:grid;grid-template-columns:1fr;border-bottom:1px solid #ffffff20;padding:19px 0}
 .expertise-item:last-child{border-bottom:0;padding-bottom:0}
 .expertise-item>span{font-size:12px;color:#e7b56b;font-weight:700;padding-top:3px}
 .expertise-item strong{font:500 21px/1.3 var(--heading);color:#fff}
-.expertise-item p{grid-column:2;color:#bfcbd9;font-size:12px;margin-top:4px}
+.expertise-item p{grid-column:1;color:#bfcbd9;font-size:12px;margin-top:4px}
 .trust{background:#e6e9ee}
 .trust-layout{display:grid;grid-template-columns:.88fr 1.12fr;gap:8%;align-items:center}
 .trust-lead{position:relative;background:#19273c;color:#fff;border-radius:9px;min-height:465px;padding:40px 42px;overflow:hidden}
@@ -97,7 +96,7 @@
 .trust-count{font:500 22px var(--heading);color:#a87427}
 .trust-item h3{font-size:22px;color:#21314a;margin-bottom:9px}
 .trust-item p{font-size:14px;color:#4d5c70;max-width:47ch}
-@media(max-width:980px){.sample-head{padding:13px 17px}.sample-brand{display:none}.sample-body{padding:21px 17px}.priority-table{font-size:11px}.priority-table th,.priority-table td{padding-left:6px;padding-right:6px}.team-layout,.trust-layout{gap:5%}.team-expertise{padding:27px}.trust-lead{padding:32px}}
+@media(max-width:980px){.sample-head{padding:13px 17px}.sample-body{padding:21px 17px}.priority-table{font-size:11px}.priority-table th,.priority-table td{padding-left:6px;padding-right:6px}.team-layout,.trust-layout{gap:5%}.team-expertise{padding:27px}.trust-lead{padding:32px}}
 @media(max-width:820px){.team-layout,.trust-layout{grid-template-columns:1fr;gap:35px}.team-expertise{box-shadow:10px 10px 0 #e8ebef}.trust-lead{min-height:0}.team-story>p:not(.team-lead){max-width:70ch}}
 @media(max-width:580px){
   .sample-head strong{font-size:12px}.sample-body{padding:21px 18px}.sample-title-row{margin-bottom:10px}.example-title{font-size:28px}.sample-tag{font-size:10px}
@@ -107,11 +106,13 @@
   .priority-table td{padding:0;border:0}
   .priority-table td:first-child{grid-column:1;grid-row:1;font-size:13px}
   .priority-table td:nth-child(2){grid-column:1 / -1;grid-row:2;font-size:13px}
-  .priority-table td:nth-child(2):before{content:"Pago a 30 días  ";font-size:11px;font-weight:500;color:#647188}
+  .priority-table td:nth-child(2):before{content:"Probabilidad de recuperar  ";font-size:11px;font-weight:500;color:#647188}
   .priority-table td:last-child{grid-column:2;grid-row:1;text-align:right;font-size:11px}
   .bar-track{margin-top:6px;height:4px}.sample-foot{font-size:11px}
   .team-expertise{padding:25px 21px}.trust-lead{padding:30px 27px}.trust-lead h2{font-size:clamp(2.35rem,10vw,3.2rem)}.trust-item{grid-template-columns:30px 1fr;gap:12px}.trust-item h3{font-size:19px}
 }
+.faq-group{margin-top:32px}
+.faq-group h3{font-size:clamp(1.35rem,2.5vw,1.75rem);color:var(--pine2);margin-bottom:10px}
 
 </style>
 </head>
@@ -123,27 +124,27 @@
       <span class="logo-text">Quórum <span>Risk</span></span>
     </a>
     <nav class="nav" aria-label="Navegación principal"><a href="#soluciones">Servicios</a><a href="#soluciones">Precios</a><a href="#casos">Casos</a><a href="#como-empezamos">Cómo empezamos</a></nav>
-    <details class="mobile-nav"><summary>Menú</summary><nav aria-label="Navegación móvil"><a href="#soluciones">Servicios y precios</a><a href="#casos">Casos técnicos</a><a href="#como-empezamos">Cómo empezamos</a><a href="#agenda">Agendar una reunión</a></nav></details>
-    <div class="right"><a class="header-cta" href="#agenda">Agendar una reunión</a></div>
+    <details class="mobile-nav"><summary>Menú</summary><nav aria-label="Navegación móvil"><a href="#soluciones">Servicios y precios</a><a href="#casos">Casos técnicos</a><a href="#como-empezamos">Cómo empezamos</a><a href="https://cal.com/quorumrisk">Agendar una reunión</a></nav></details>
+    <div class="right"><a class="header-cta" href="https://cal.com/quorumrisk">Agendar una reunión</a></div>
   </div></header>
   <main>
     <section class="hero" id="inicio" aria-labelledby="principal"><div class="wrap hero-grid">
       <div>
         <h1 id="principal">Entiende tu cartera. <em>Decide dónde actuar.</em></h1>
         <p class="hero-description">Predecimos qué clientes van a atrasarse y cuáles de los atrasados todavía van a pagar, para que tu equipo cobre primero donde más se recupera. Con Machine Learning y tus propios datos.</p>
-        <div class="actions"><a class="button button-primary" href="#agenda">Agendar una reunión</a><a class="button button-outline" href="#soluciones">Explorar soluciones</a></div>
+        <div class="actions"><a class="button button-primary" href="https://cal.com/quorumrisk">Agendar una reunión</a><a class="button button-outline" href="#soluciones">Explorar soluciones</a></div>
         <p class="micro">Primera reunión gratuita de 30 minutos. Sin compromiso.</p>
       </div>
       <div class="sample" aria-label="Vista ilustrativa de cartera priorizada con datos sintéticos">
-        <div class="sample-head"><strong>Así puede verse la cartera priorizada de tu equipo</strong><span class="sample-brand" aria-hidden="true"><span></span> Quórum Risk</span></div>
+        <div class="sample-head"><strong>Así puede verse la cartera priorizada de tu equipo</strong><span class="sample-brand">Probabilidad</span></div>
         <div class="sample-body"><div class="sample-title-row"><h2 class="example-title">Prioridades</h2><span class="sample-tag">Vista de cartera</span></div>
-          <div class="example-scroll"><table class="priority-table"><thead><tr><th>Cliente</th><th>Probabilidad de pago</th><th>Qué hacer</th></tr></thead><tbody>
-            <tr><td>Servicios Altiplano</td><td>95 %<div class="bar-track"><span style="width:95%"></span></div></td><td>Llamar hoy</td></tr>
-            <tr><td>Comercial Pacífico</td><td>82 %<div class="bar-track"><span style="width:82%"></span></div></td><td>Gestión prioritaria</td></tr>
-            <tr><td>Viajes Horizonte</td><td>61 %<div class="bar-track"><span style="width:61%"></span></div></td><td>Recordatorio</td></tr>
-            <tr><td>Distribuidora Andina</td><td>18 %<div class="bar-track"><span style="width:18%"></span></div></td><td>Sin acción prioritaria</td></tr>
+          <div class="example-scroll"><table class="priority-table"><thead><tr><th>Cliente</th><th>Probabilidad de recuperar</th><th>Qué hacer</th></tr></thead><tbody>
+            <tr><td>Servicios Altiplano</td><td>92 %<div class="bar-track"><span style="width:92%"></span></div></td><td>Cobrar hoy</td></tr>
+            <tr><td>Comercial Pacífico</td><td>71 %<div class="bar-track"><span style="width:71%"></span></div></td><td>Llamar esta semana</td></tr>
+            <tr><td>Viajes Horizonte</td><td>45 %<div class="bar-track"><span style="width:45%"></span></div></td><td>Ofrecer acuerdo de pago</td></tr>
+            <tr><td>Distribuidora Andina</td><td>9 %<div class="bar-track"><span style="width:9%"></span></div></td><td>Mensaje automático</td></tr>
           </tbody></table></div>
-          <p class="sample-foot">Probabilidad de pago a 30 días. Datos y empresas ficticios. La prioridad y las acciones son ilustrativas; la estrategia real se valida con cada empresa.</p>
+          <p class="sample-foot">Primero donde más se recupera. Las acciones se ajustan a la política de cobro de cada empresa. Empresas ficticias.</p>
           <a class="sample-link" href="/casos/recuperacion-de-cartera/">Ver un ejemplo completo</a>
         </div>
       </div>
@@ -154,7 +155,7 @@
       <li>Te enteras del atraso cuando la factura o la cuota ya venció.</li>
       <li>Das cupos y plazos sin saber quién se está deteriorando.</li>
       <li>No sabes cuánto de lo vencido vas a recuperar este trimestre.</li>
-    </ul><p class="pain-closing">Si te pasa más de una, la respuesta puede estar en tus datos de pago. Revisemos qué nos dicen.</p><a class="button button-primary" href="#agenda">Agendar una reunión</a><p class="micro" style="color:var(--muted)">30 minutos sin costo.</p></div></section>
+    </ul><p class="pain-closing">Si te pasa más de una, la respuesta puede estar en tus datos de pago. Revisemos qué nos dicen.</p><a class="button button-primary" href="https://cal.com/quorumrisk">Agendar una reunión</a><p class="micro" style="color:var(--muted)">30 minutos sin costo.</p></div></section>
     <div class="scope"><div class="wrap"><p>Trabajamos con empresas que venden a crédito o a plazos</p><p>Fintechs y bancos, cooperativas y entidades financieras, comercio y distribución, construcción, agencias de viajes y servicios que cobran en cuotas.</p><p class="remote">Desde Bogotá, Colombia, trabajamos de forma virtual con empresas de México, Argentina, Perú, Bolivia, Chile y el resto de Latinoamérica.</p></div></div>
     <section class="section" id="soluciones" aria-labelledby="servicios-titulo"><div class="wrap">
       <div class="section-intro"><div><h2 id="servicios-titulo">Servicios y precios</h2></div><p>Trabajamos con tus datos y el problema de tu cartera. Los precios son de partida; el alcance, los entregables definitivos y los plazos se acuerdan en la propuesta.</p></div>
@@ -168,8 +169,8 @@
       <p class="service-note">Todos los servicios se cotizan según su alcance. Cobramos en dólares y la forma de pago se acuerda en la propuesta.</p>
     </div></section>
     <section class="section team-section" id="equipo" aria-labelledby="equipo-titulo"><div class="wrap team-layout">
-      <div class="team-story"><h2 id="equipo-titulo">Nuestro equipo</h2><p class="team-lead">Experiencia en banca y fintech, aplicada a las decisiones de tu cartera.</p><p>Venimos del trabajo con riesgo de crédito, prevención de fraude y analítica. Combinamos criterio de negocio con implementación técnica para construir y revisar soluciones.</p><div class="team-toolset"><span>Herramientas que utilizamos</span><p>Power BI, SQL, Azure, Machine Learning y MLOps.</p></div></div>
-      <div class="team-expertise" aria-label="Áreas de experiencia"><div class="expertise-head"><span>Áreas de trabajo</span><svg viewBox="0 0 62 42" fill="none" aria-hidden="true"><path d="M5 33 22 20 35 26 56 7" stroke="#f2bc69" stroke-width="2"/><circle cx="5" cy="33" r="3.5" fill="#f2bc69"/><circle cx="22" cy="20" r="3.5" fill="#f2bc69"/><circle cx="35" cy="26" r="3.5" fill="#f2bc69"/><circle cx="56" cy="7" r="3.5" fill="#f2bc69"/></svg></div><div class="expertise-item"><span>01</span><strong>Riesgo de crédito</strong><p>Comprender dónde se concentra el deterioro.</p></div><div class="expertise-item"><span>02</span><strong>Prevención de fraude</strong><p>Identificar señales, revisar supuestos y controles.</p></div><div class="expertise-item"><span>03</span><strong>Analítica aplicada</strong><p>Convertir información en modelos, tableros y decisiones.</p></div></div>
+      <div class="team-story"><h2 id="equipo-titulo">Nuestro equipo</h2><p class="team-lead">Experiencia en banca y fintech, aplicada a las decisiones de tu cartera.</p><p>Venimos del trabajo con riesgo de crédito, prevención de fraude y analítica. Combinamos criterio de negocio con implementación técnica para construir y revisar soluciones.</p><div class="team-toolset"><span>Herramientas que utilizamos</span><p>Machine Learning, Python, SQL, Azure, MLOps, Power BI.</p></div></div>
+      <div class="team-expertise" aria-label="Áreas de experiencia"><div class="expertise-head"><span>Áreas de trabajo</span><svg viewBox="0 0 62 42" fill="none" aria-hidden="true"><path d="M5 33 22 20 35 26 56 7" stroke="#f2bc69" stroke-width="2"/><circle cx="5" cy="33" r="3.5" fill="#f2bc69"/><circle cx="22" cy="20" r="3.5" fill="#f2bc69"/><circle cx="35" cy="26" r="3.5" fill="#f2bc69"/><circle cx="56" cy="7" r="3.5" fill="#f2bc69"/></svg></div><div class="expertise-item"><strong>Riesgo de crédito</strong><p>Comprender dónde se concentra el deterioro.</p></div><div class="expertise-item"><strong>Prevención de fraude</strong><p>Identificar señales, revisar supuestos y controles.</p></div><div class="expertise-item"><strong>Analítica aplicada</strong><p>Convertir información en modelos, tableros y decisiones.</p></div></div>
     </div></section>
     <section class="section" id="casos" aria-labelledby="casos-titulo" style="background:var(--surface);border-block:1px solid var(--line)"><div class="wrap">
       <div class="section-intro"><div><h2 id="casos-titulo">Casos técnicos</h2></div><p>Dos ejercicios reproducibles que muestran cómo definimos el problema, construimos variables y evaluamos si un modelo aporta valor. Son demostraciones, no resultados de clientes.</p></div>
@@ -188,18 +189,23 @@
       <div class="step"><b>02</b><strong>Revisamos viabilidad.</strong><p>Si hay encaje, acordamos cómo evaluar tus datos y el alcance de un diagnóstico.</p></div>
       <div class="step"><b>03</b><strong>Proponemos con criterio.</strong><p>Te presentamos entregables, plazos y presupuesto según el proyecto.</p></div>
     </div></div></section>
-    <section class="contact" id="agenda" aria-labelledby="agenda-titulo"><div class="wrap contact-grid"><div><h2 id="agenda-titulo">Hablemos de tu cartera.</h2><p>Valoremos juntos por dónde empezar. Cada empresa gestiona su cartera de forma diferente. Dediquemos 30 minutos a conocer tu situación, entender qué necesitas y valorar cómo podemos ayudarte.</p></div><div class="contact-panel"><strong>Reunión inicial de 30 minutos</strong><a class="button button-primary" href="https://cal.com/quorumrisk" target="_blank" rel="noopener noreferrer">Agendar una reunión</a><p class="micro">Sin costo ni compromiso. No necesitamos datos sensibles.</p><a class="email" href="mailto:contacto@quorumrisk.co?subject=Consulta%20sobre%20cartera">contacto@quorumrisk.co</a></div></div></section>
     <section class="section faq" id="preguntas" aria-labelledby="faq-titulo"><div class="wrap"><h2 id="faq-titulo">Preguntas frecuentes</h2>
-      <details><summary>¿Qué datos necesitan?</summary><p>Información de facturas o cuotas, vencimientos, pagos y saldos. En la primera reunión no nos envías nada. Si avanzamos, acordamos qué datos se necesitan y cómo protegerlos.</p></details>
-      <details><summary>¿Necesito un equipo técnico?</summary><p>No para la primera revisión. Podemos comenzar con archivos que ya tengas, desde Excel hasta reportes de tu sistema. Para conectarnos a sistemas internos quizá necesitemos apoyo de tu equipo técnico.</p></details>
-      <details><summary>¿Cuánto tarda un proyecto?</summary><p>Depende del alcance y del estado de tus datos. Después de conocer tu situación, te presentamos una propuesta con entregables, tiempos y presupuesto.</p></details>
-      <details><summary>¿Reemplazan a mi equipo de cobranza?</summary><p>No. Ayudamos a decidir dónde enfocar el esfuerzo de tu equipo. El alcance operativo se define con cada empresa.</p></details>
-      <details><summary>¿Trabajan fuera de Colombia?</summary><p>Sí. Desde Bogotá trabajamos de forma virtual con empresas de México, Argentina, Perú, Bolivia, Chile y el resto de Latinoamérica.</p></details>
-      <details><summary>¿Pueden revisar un modelo o tablero que ya tenemos?</summary><p>Sí. Auditamos modelos de Machine Learning y tableros de Power BI, tanto sus datos como sus cálculos y validación.</p></details>
-      <details><summary>¿Cuánto cuesta y cómo se paga?</summary><p>Los precios desde aparecen en <a href="#soluciones">Servicios y precios</a>. Cobramos en dólares y la forma de pago se acuerda en la propuesta.</p></details>
-      <details><summary>¿Qué diferencia hay entre la reunión y un diagnóstico?</summary><p>La primera reunión de 30 minutos es gratuita y sirve para conocer tu caso. El diagnóstico es un trabajo contratado con un alcance, entregables y presupuesto acordados previamente.</p></details>
-      <p class="closing"><a class="button button-primary" href="#agenda">Agendar una reunión</a></p>
+      <div class="faq-group"><h3>Antes de empezar</h3>
+        <details><summary>¿Qué datos necesitan?</summary><p>Información de facturas o cuotas, vencimientos, pagos y saldos. En la primera reunión no nos envías nada. Si avanzamos, acordamos qué datos se necesitan y cómo protegerlos.</p></details>
+        <details><summary>¿Necesito un equipo técnico?</summary><p>No para la primera revisión. Podemos comenzar con archivos que ya tengas, desde Excel hasta reportes de tu sistema. Para conectarnos a sistemas internos quizá necesitemos apoyo de tu equipo técnico.</p></details>
+        <details><summary>¿Qué diferencia hay entre la reunión y un diagnóstico?</summary><p>La primera reunión de 30 minutos es gratuita y sirve para conocer tu caso. El diagnóstico es un trabajo contratado con un alcance, entregables y presupuesto acordados previamente.</p></details>
+      </div>
+      <div class="faq-group"><h3>Durante el proyecto</h3>
+        <details><summary>¿Cuánto tarda un proyecto?</summary><p>Depende del alcance y del estado de tus datos. Después de conocer tu situación, te presentamos una propuesta con entregables, tiempos y presupuesto.</p></details>
+        <details><summary>¿Reemplazan a mi equipo de cobranza?</summary><p>No. Ayudamos a decidir dónde enfocar el esfuerzo de tu equipo. El alcance operativo se define con cada empresa.</p></details>
+        <details><summary>¿Pueden revisar un modelo o tablero que ya tenemos?</summary><p>Sí. Auditamos modelos de Machine Learning y tableros de Power BI, tanto sus datos como sus cálculos y validación.</p></details>
+      </div>
+      <div class="faq-group"><h3>Precios y alcance</h3>
+        <details><summary>¿Cuánto cuesta y cómo se paga?</summary><p>Los precios desde aparecen en <a href="#soluciones">Servicios y precios</a>. Cobramos en dólares y la forma de pago se acuerda en la propuesta.</p></details>
+        <details><summary>¿Trabajan fuera de Colombia?</summary><p>Sí. Desde Bogotá trabajamos de forma virtual con empresas de México, Argentina, Perú, Bolivia, Chile y el resto de Latinoamérica.</p></details>
+      </div>
     </div></section>
+    <section class="contact" id="agenda" aria-labelledby="agenda-titulo"><div class="wrap contact-grid"><div><h2 id="agenda-titulo">Hablemos de tu cartera.</h2><p>Valoremos juntos por dónde empezar. Cada empresa gestiona su cartera de forma diferente. Dediquemos 30 minutos a conocer tu situación, entender qué necesitas y valorar cómo podemos ayudarte.</p></div><div class="contact-panel"><strong>Reunión inicial de 30 minutos</strong><a class="button button-primary" href="https://cal.com/quorumrisk" target="_blank" rel="noopener noreferrer">Agendar una reunión</a><p class="micro">Sin costo ni compromiso. No necesitamos datos sensibles.</p><a class="email" href="mailto:contacto@quorumrisk.co?subject=Consulta%20sobre%20cartera">contacto@quorumrisk.co</a></div></div></section>
   </main>
   <footer class="footer"><div class="wrap"><div><a class="logo" href="/" aria-label="Quórum Risk, volver al inicio"><span class="logo-text">Quórum <span>Risk</span></span></a><p>Quórum Risk, Bogotá, Colombia. Atención virtual a Latinoamérica.</p><p>Los ejemplos son ilustrativos y no representan resultados de clientes.</p></div><div class="footer-links"><a href="/privacidad/">Política de tratamiento de datos</a><a href="mailto:contacto@quorumrisk.co">Contacto</a></div></div></footer>
 
