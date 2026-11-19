@@ -39,7 +39,7 @@
 .service-audience p{font-size:14px;line-height:1.8;color:var(--muted)}
 .service-audience>div:last-child{border-left:1px solid #cbd3df;padding-left:45px}
 @media(max-width:820px){.service-audience{grid-template-columns:1fr;gap:24px;padding:26px}.service-audience>div:last-child{border-left:0;border-top:1px solid #cbd3df;padding-left:0;padding-top:23px}}
-.team-panel,.privacy-panel{padding:30px;border:1px solid var(--line);border-radius:9px;background:var(--surface)}.team-panel p,.privacy-panel p{max-width:81ch;color:var(--muted);font-size:15px}.trust{background:#e6e9ee}.trust h2{margin-bottom:20px}.trust .privacy-panel{border-color:#cbd2db}.text-link{color:var(--pine2);font-weight:700;text-decoration:underline}.faq{background:var(--paper);border-top:1px solid var(--line)}.faq h2{margin-bottom:25px}.faq details{padding:17px 0;border-bottom:1px solid var(--line)}.faq summary{font-weight:700;color:#233149;cursor:pointer;min-height:44px;display:flex;align-items:center}.faq details p{color:var(--muted);font-size:14px;max-width:80ch;padding:0 0 8px}.faq .closing{margin-top:30px}.footer .wrap{align-items:flex-start}.footer-links{display:flex;gap:24px;flex-wrap:wrap}.footer-links a{color:#e4c290;font-size:12px}.service-note{line-height:1.7}
+.team-panel,.privacy-panel{padding:30px;border:1px solid var(--line);border-radius:9px;background:var(--surface)}.team-panel p,.privacy-panel p{max-width:81ch;color:var(--muted);font-size:15px}.trust{background:#e6e9ee}.trust h2{margin-bottom:20px}.trust .privacy-panel{border-color:#cbd2db}.text-link{color:var(--pine2);font-weight:700;text-decoration:underline}.faq{background:var(--paper);border-top:1px solid var(--line)}.faq h2{margin-bottom:25px}.faq .closing{margin-top:30px}.footer .wrap{align-items:flex-start}.footer-links{display:flex;gap:24px;flex-wrap:wrap}.footer-links a{color:#e4c290;font-size:12px}.service-note{line-height:1.7}
 @media(max-width:1080px){.service-cards{gap:12px}}
 @media(max-width:820px){.mobile-nav{display:block;margin-left:auto}.right{margin-left:0}.service-cards{grid-template-columns:1fr}.section{padding:75px 0}.sample{max-width:620px}}
 @media(max-width:580px){.header-content{gap:6px}.logo{gap:6px}.header-cta{font-size:10px;padding:8px}.mobile-nav summary{padding:8px;font-size:11px}.sample-body{padding:17px}.priority-table{min-width:440px}.service-group h3{font-size:22px}.pain-list li{font-size:14px}.contact-panel{padding:22px}.footer-links{gap:13px}}
@@ -115,8 +115,19 @@
   .bar-track{margin-top:6px;height:4px}.sample-foot{font-size:11px}
   .team-expertise{padding:25px 21px}.trust-lead{padding:30px 27px}.trust-lead h2{font-size:clamp(2.35rem,10vw,3.2rem)}.trust-item{grid-template-columns:30px 1fr;gap:12px}.trust-item h3{font-size:19px}
 }
-.faq-group{margin-top:32px}
-.faq-group h3{font-size:clamp(1.35rem,2.5vw,1.75rem);color:var(--pine2);margin-bottom:10px}
+.faq-group{margin-top:18px;border:1px solid var(--line);border-radius:9px;background:var(--surface);overflow:hidden}
+.faq-group>summary{list-style:none;cursor:pointer;min-height:66px;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.faq-group>summary::-webkit-details-marker{display:none}
+.faq-group>summary::after{content:"";width:10px;height:10px;flex:0 0 10px;border-right:2px solid var(--pine2);border-bottom:2px solid var(--pine2);transform:rotate(45deg);transition:transform .2s}
+.faq-group[open]>summary::after{transform:rotate(225deg)}
+.faq-group[open]>summary{border-bottom:1px solid var(--line)}
+.faq-group>summary h3{font-size:clamp(1.35rem,2.5vw,1.75rem);color:var(--pine2);margin:0}
+.faq-items{padding:3px 24px 11px}
+.faq-item{padding:19px 0;border-bottom:1px solid var(--line)}
+.faq-item:last-child{border-bottom:0}
+.faq-item h4{font:700 15px/1.5 var(--body);color:#233149;margin:0 0 5px}
+.faq-item p{color:var(--muted);font-size:14px;max-width:80ch;margin:0}
+@media(prefers-reduced-motion:reduce){.faq-group>summary::after{transition:none}}
 
 </style>
 </head>
@@ -193,20 +204,20 @@
       <div class="step"><b>03</b><strong>Proponemos con criterio.</strong><p>Te presentamos entregables, plazos y presupuesto según el proyecto.</p></div>
     </div></div></section>
     <section class="section faq" id="preguntas" aria-labelledby="faq-titulo"><div class="wrap"><h2 id="faq-titulo">Preguntas frecuentes</h2>
-      <div class="faq-group"><h3>Antes de empezar</h3>
-        <details><summary>¿Qué datos necesitan?</summary><p>Información de facturas o cuotas, vencimientos, pagos y saldos. En la primera reunión no nos envías nada. Si avanzamos, acordamos qué datos se necesitan y cómo protegerlos.</p></details>
-        <details><summary>¿Necesito un equipo técnico?</summary><p>No para la primera revisión. Podemos comenzar con archivos que ya tengas, desde Excel hasta reportes de tu sistema. Para conectarnos a sistemas internos quizá necesitemos apoyo de tu equipo técnico.</p></details>
-        <details><summary>¿Qué diferencia hay entre la reunión y un diagnóstico?</summary><p>La primera reunión de 30 minutos es gratuita y sirve para conocer tu caso. El diagnóstico es un trabajo contratado con un alcance, entregables y presupuesto acordados previamente.</p></details>
-      </div>
-      <div class="faq-group"><h3>Durante el proyecto</h3>
-        <details><summary>¿Cuánto tarda un proyecto?</summary><p>Depende del alcance y del estado de tus datos. Después de conocer tu situación, te presentamos una propuesta con entregables, tiempos y presupuesto.</p></details>
-        <details><summary>¿Reemplazan a mi equipo de cobranza?</summary><p>No. Ayudamos a decidir dónde enfocar el esfuerzo de tu equipo. El alcance operativo se define con cada empresa.</p></details>
-        <details><summary>¿Pueden revisar un modelo o tablero que ya tenemos?</summary><p>Sí. Auditamos modelos de Machine Learning y tableros de Power BI, tanto sus datos como sus cálculos y validación.</p></details>
-      </div>
-      <div class="faq-group"><h3>Precios y alcance</h3>
-        <details><summary>¿Cuánto cuesta y cómo se paga?</summary><p>Los precios desde aparecen en <a href="#soluciones">Servicios y precios</a>. La forma de pago se acuerda en la propuesta.</p></details>
-        <details><summary>¿Trabajan fuera de Colombia?</summary><p>Sí. Desde Bogotá trabajamos de forma virtual con empresas de México, Argentina, Perú, Bolivia, Chile y el resto de Latinoamérica.</p></details>
-      </div>
+      <details class="faq-group"><summary><h3>Antes de empezar</h3></summary><div class="faq-items">
+        <div class="faq-item"><h4>¿Qué datos necesitan?</h4><p>Información de facturas o cuotas, vencimientos, pagos y saldos. En la primera reunión no nos envías nada. Si avanzamos, acordamos qué datos se necesitan y cómo protegerlos.</p></div>
+        <div class="faq-item"><h4>¿Necesito un equipo técnico?</h4><p>No para la primera revisión. Podemos comenzar con archivos que ya tengas, desde Excel hasta reportes de tu sistema. Para conectarnos a sistemas internos quizá necesitemos apoyo de tu equipo técnico.</p></div>
+        <div class="faq-item"><h4>¿Qué diferencia hay entre la reunión y un diagnóstico?</h4><p>La primera reunión de 30 minutos es gratuita y sirve para conocer tu caso. El diagnóstico es un trabajo contratado con un alcance, entregables y presupuesto acordados previamente.</p></div>
+      </div></details>
+      <details class="faq-group"><summary><h3>Durante el proyecto</h3></summary><div class="faq-items">
+        <div class="faq-item"><h4>¿Cuánto tarda un proyecto?</h4><p>Depende del alcance y del estado de tus datos. Después de conocer tu situación, te presentamos una propuesta con entregables, tiempos y presupuesto.</p></div>
+        <div class="faq-item"><h4>¿Reemplazan a mi equipo de cobranza?</h4><p>No. Ayudamos a decidir dónde enfocar el esfuerzo de tu equipo. El alcance operativo se define con cada empresa.</p></div>
+        <div class="faq-item"><h4>¿Pueden revisar un modelo o tablero que ya tenemos?</h4><p>Sí. Auditamos modelos de Machine Learning y tableros de Power BI, tanto sus datos como sus cálculos y validación.</p></div>
+      </div></details>
+      <details class="faq-group"><summary><h3>Precios y alcance</h3></summary><div class="faq-items">
+        <div class="faq-item"><h4>¿Cuánto cuesta y cómo se paga?</h4><p>Los precios desde aparecen en <a href="#soluciones">Servicios y precios</a>. La forma de pago se acuerda en la propuesta.</p></div>
+        <div class="faq-item"><h4>¿Trabajan fuera de Colombia?</h4><p>Sí. Desde Bogotá trabajamos de forma virtual con empresas de México, Argentina, Perú, Bolivia, Chile y el resto de Latinoamérica.</p></div>
+      </div></details>
     </div></section>
     <section class="contact" id="agenda" aria-labelledby="agenda-titulo"><div class="wrap contact-grid"><div><h2 id="agenda-titulo">Hablemos de tu cartera.</h2><p>Valoremos juntos por dónde empezar. Cada empresa gestiona su cartera de forma diferente. Dediquemos 30 minutos a conocer tu situación, entender qué necesitas y valorar cómo podemos ayudarte.</p></div><div class="contact-panel"><strong>Reunión inicial de 30 minutos</strong><a class="button button-primary" href="https://cal.com/quorumrisk" target="_blank" rel="noopener noreferrer">Agendar una reunión</a><p class="micro">Sin costo ni compromiso. No necesitamos datos sensibles.</p><a class="email" href="mailto:contacto@quorumrisk.co?subject=Consulta%20sobre%20cartera">contacto@quorumrisk.co</a></div></div></section>
   </main>
